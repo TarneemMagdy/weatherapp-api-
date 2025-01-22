@@ -1,0 +1,139 @@
+   *{
+    box-sizing: border-box;
+}
+body {
+    color: #bfc1c8;
+    font-family: "Roboto", "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    background: #1e202b;
+}
+.forecast .forecast-header {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    font-weight: 400;
+        display: flex
+;
+    justify-content: space-between;
+
+}
+
+.forecast .forecast-content {
+
+       padding: 50px 20px 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+ 
+}
+.forecast.today .location {
+    font-size: 18px;
+    font-size: 1.2857142857em;
+    font-weight: 400;
+}
+.forecast .forecast-content .degree {
+    font-size: 24px;
+    font-size: 1.7142857143em;
+    color: white;
+    font-weight: 700;
+}
+ .forecast.today .degree .num, .forecast-container .forecast.today .degree .forecast-icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+.custom {
+    color: #009ad8;
+    margin: 20px 0;
+}
+.forecast.today span {
+    margin-right: 20px;
+}
+.forecast.today span img {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+ input[type="text"] {
+    width: 70%;
+    padding: 20px 50px 20px 20px;
+        position: relative;
+ 
+   
+ 
+        border-radius: 20px;
+    border: none;
+
+}
+ input[type="button"] {
+    position: relative;
+    left: -106px;
+    background: #009ad8;
+    padding: 10px 29px;
+    border-radius: 30px;
+    color: white;
+    border: none;
+}
+.forecast {
+    width: 33.33%;
+}
+input[type="text"]:focus {
+    outline-style: none;
+}
+.container-weather {
+    display: flex;
+
+    justify-content: space-around;
+    margin-top: 47px;
+      
+
+}
+.container{
+      margin-top: 40px;
+}
+.container-weather.forecast:nth-child(even) {
+    background-color: #262936;
+}
+.forecast{
+    text-align: center;
+}
+.forecast.today {
+    text-align: left;
+}
+
+
+.loader {
+  width: 180px;
+  height: 140px;
+  display: block;
+  margin: 0 auto 20px;
+  background-image: radial-gradient(circle 25px at 25px 25px, #009ad8 100%, transparent 0), radial-gradient(circle 50px at 50px 50px, #009ad8 100%, transparent 0), radial-gradient(circle 25px at 25px 25px, #009ad8 100%, transparent 0), radial-gradient(circle 15px at 15px 15px, #009ad8 100%, transparent 0), linear-gradient(#009ad8 50px, transparent 0);
+  background-size: 50px 50px, 100px 75px, 50px 50px, 30px 32px, 136px 20px;
+  background-repeat: no-repeat;
+  background-position: 0px 30px, 30px 0px, 113px 29px, 147px 50px, 23px 60px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.loader::after {
+  content: '';  
+  position: absolute;
+  left: 2px;
+  top: 65px;
+  width: 2px;
+  height: 6px;
+  color: #009ad8; /* Change to the desired color */
+  box-sizing: border-box;
+  animation: animloader 0.6s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    box-shadow: 25px 0 #009ad8, 50px 0 #009ad8, 75px 0 #009ad8, 100px 0 #009ad8, 125px 0 #009ad8, 150px 0 #009ad8, 25px 0 #009ad8, 50px 0 #009ad8, 75px 0 #009ad8, 100px 0 #009ad8, 125px 0 #009ad8, 150px 0 #009ad8;
+  }
+  50% {
+    box-shadow: 25px 20px #009ad8, 50px 60px rgba(0, 154, 216, 0), 75px 30px rgba(0, 154, 216, 0), 100px 70px rgba(0, 154, 216, 0), 125px 40px #009ad8, 150px 60px rgba(0, 154, 216, 0), 25px 20px #009ad8, 50px 30px #009ad8, 75px 10px #009ad8, 100px 30px #009ad8, 125px 30px rgba(0, 154, 216, 0), 150px 30px rgba(0, 154, 216, 0);
+  }
+  100% {
+    box-shadow: 25px 60px rgba(0, 154, 216, 0), 50px 60px rgba(0, 154, 216, 0), 75px 50px rgba(0, 154, 216, 0), 100px 70px rgba(0, 154, 216, 0), 125px 70px rgba(0, 154, 216, 0), 150px 60px rgba(0, 154, 216, 0), 25px 80px rgba(0, 154, 216, 0), 50px 80px rgba(0, 154, 216, 0), 75px 70px rgba(0, 154, 216, 0), 100px 60px rgba(0, 154, 216, 0), 125px 30px rgba(0, 154, 216, 0), 150px 30px rgba(0, 154, 216, 0);
+  }
+}
